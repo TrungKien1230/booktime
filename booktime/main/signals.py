@@ -10,6 +10,7 @@ THUMBNAIL_SIZE = (300, 300)
 
 logger = logging.getLogger(__name__)
 
+
 @receiver(pre_save, sender=ProductImage)
 def generate_thumbnail(sender, instance, **kwargs):
     logger.info(
